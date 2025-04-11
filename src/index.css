@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+.container{
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn{
+  border: none;
+  outline: none;
+  background: #518b8b;
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 70px;
+  width: 100%;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: white;
+  transition: all 0.8s;
+}
+.btn:hover{
+  transform: scale(0.8);
+}

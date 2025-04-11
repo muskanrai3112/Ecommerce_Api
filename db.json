@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Sample Product",
+      "brand": "BrandX",
+      "price": "123",
+      "rating": "4.5",
+      "returnPolicy": "30 days"
+    }
+  ]
+}

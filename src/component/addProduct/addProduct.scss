@@ -1,0 +1,31 @@
+.newData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  &__box {
+    input {
+      padding: 10px 50px;
+      min-width: 450px;
+      width: 100%;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      background-color: white;
+      color: black;
+      border: 1px solid #518b8b;
+      
+      &::placeholder{
+        color: #000;
+      }
+    }
+  }
+}
+.btn.submit{
+    max-width: 150px;
+    width: 100%;
+}
+.addProduct-title{
+    text-align: center;
+    margin: 15px 0;
+}
