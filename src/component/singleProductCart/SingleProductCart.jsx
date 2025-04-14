@@ -31,7 +31,6 @@ const SingleProductCart = () => {
         <div className="container">
           <div className="homeProducts__singleCard cartSingleBox">
             <img src={product.thumbnail} alt={product.title} />
-
             <div className="homeProducts__singleCard-menu">
               <p>{product.title}</p>
               <p>Quantity: {product.quantity}</p>

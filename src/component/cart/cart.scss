@@ -1,6 +1,13 @@
-.cartMain{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 40px;
-    gap: 20px;
+.cartMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 40px;
+  gap: 20px;
+}
+.homeProducts__singleCard-text {
+  text-decoration: none;
+  color: black;
+  span {
+    color: black;
+  }
 }

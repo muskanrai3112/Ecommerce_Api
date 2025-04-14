@@ -25,6 +25,7 @@
   line-height: 26px;
   color: white;
   transition: all 0.8s;
+  cursor: pointer;
 }
 .btn:hover{
   transform: scale(0.8);

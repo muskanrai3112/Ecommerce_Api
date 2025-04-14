@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import Loadericon from "../../assets/Loader.gif";
 import { useLocation } from "react-router-dom";
 
-const Home = ({setCartCount}) => {
+const Home = ({ setCartCount, setCartItems, cartItems }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -139,11 +139,18 @@ const Home = ({setCartCount}) => {
 
   const paginationArray = [...preThreeNoArr, ...nextThreeNoArr];
 
-  const handleAddToCart=(e)=>{
-    e.preventDefault()
-    setCartCount((preCount)=>preCount+1)
-  }
-
+  const handleAddToCart = (e, item) => {
+    e.preventDefault();
+    setCartCount((preCount) => preCount + 1);
+    const isAlreadyInCart = cartItems.find(
+      (cartItem) => cartItem.id === item.id
+    );
+    if (!isAlreadyInCart) {
+      setCartItems([...cartItems, item]);
+    } else {
+      alert("Item is already in cart");
+    }
+  };
 
   return (
     <>
@@ -248,7 +255,11 @@ const Home = ({setCartCount}) => {
                             </p>
                           </h6>
                         </div>
-                        <button className="btn btncart" onClick={(e) => handleAddToCart(e, item)}>Add To Cart</button>
+                        <button
+                          className="btn btncart"
+                          onClick={(e) => handleAddToCart(e, item)}>
+                          Add To Cart
+                        </button>
                         <div className="homeProducts__singleCard-icons">
                           <MdDelete
                             className="delete"
